@@ -10,7 +10,6 @@ from flask_login import UserMixin, login_user, LoginManager, current_user, logou
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 Bootstrap5(app)
@@ -172,8 +171,9 @@ def home():
         categories = Category.query.all()
         tasks_by_category = {}
         for category in categories:
-            tasks_by_category[category.name] = ToDoList.query.filter_by(category_id=category.id,
-                                                                        author_id=current_user.id).all()
+            tasks_by_category[category.name] = (ToDoList.query.filter_by(category_id=category.id,
+                                                                         author_id=current_user.id)
+                                                .order_by(ToDoList.due_date).all())
         form = AddForm()
         if form.validate_on_submit():
             category_id = form.category.data
