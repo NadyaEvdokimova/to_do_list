@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F2F2F2;
+  padding: 0 16px;
+  overflow-x: hidden;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #F27649;
+  margin: 0 -16px auto -16px;
+  padding: 3px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    padding: 0.4rem;
+}
+
+.title {
+  color: #F2F2F2;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: auto;
+}
+
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li {
+  color: #F2F2F2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #F2F2F2;
+  color: #F27649;
+  cursor: pointer;
+}
+
+li > a {
+  font-size: 1.5em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #E1E1E2;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.task_card {
+  margin: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.task {
+  width: 100%;
+}
+
+.due_date {
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+}
+
+.grid_cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.no_logged {
+  margin: auto;
+  color: #737373;
+}
+
+.add_btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+svg.bi.bi-plus-circle {
+    display: inline-block;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
+
+.hid_form {
+  visibility: hidden;
+  display: none;
+}
+
+.buttons {
+  text-align: right;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+
+.buttons:first-child {
+  color: green;
+}
+
+.buttons:last-child {
+  color: red;
+}
+
+.bi {
+    display: inline-block;
+    vertical-align: -.1em;
+}
+
+.cross, .edit {
+  background-color: white;
+  border: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.card > h2 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.due-date-close {
+    color: red;
+}
+
+
