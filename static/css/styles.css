@@ -118,6 +118,12 @@ li > a {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (max-width: 800px) {
+  .grid_cont {
+    grid-template-columns: 12fr;
+  }
+}
+
 .no_logged {
   margin: auto;
   color: #737373;
